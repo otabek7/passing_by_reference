@@ -29,18 +29,20 @@ int main()
 	cout << "When I call function_one(2,2), the values of the variables are as follows " << endl 
 		<< "i before execution: " <<i << endl
 		<< "j before execution: " <<j << endl;
-		function_one(i,j);
+	function_one(i, j);
 	cout << "i after execution: " <<i << endl
 		 << "j after execution: " <<j << endl;
 		 
-		 
+	
 	//Function_two
 		example foo;
 	cout << endl;
 	cout << "When I call function_two(foo), the values of the variables are as follows " << endl
 		<< "foo.value before execution: " << foo.value << endl;
 		function_two(foo);
+		
 	cout << "foo.value after execution: " << foo.value << endl;
+	
 	
 	//Function_three
 	int a =4;
@@ -49,27 +51,31 @@ int main()
 	cout << "When I call function_three(4,4), the values of the variables are as follows " << endl 
 		<< "a before execution: " <<a << endl
 		<< "b before execution: " <<b << endl;
-	//	function_three(); //INSERT THE CORRECT FUNCTION ARGUMENTS HERE. PASS A and B INTO THE FUNCTION.
+		function_three(&a, b); //INSERT THE CORRECT FUNCTION ARGUMENTS HERE. PASS A and B INTO THE FUNCTION.
 	cout << "a after execution: " <<a << endl
 		 << "b after execution: " <<b << endl;
 		 
 	
 	//Function_four
-	int * bar = new int[5];
-	bar[0]=3;
-	bar[1]=6;
-	bar[2] =4;
-	bar[3]=-5;
-	bar[4] = 5;
-	int lowest=0;
-	int highest =0;
+	int *bar = new int[5];
+	bar[0] = 1;
+	bar[1] = 3;
+	bar[2] = 8;
+	bar[3] = -3;
+	bar[4] = 7;
+
+	int lowest = 0;
+	int highest = 0;
+	/*cout << "Testing " << arr[i] << " ";
+        arr[i] +=2;
+        cout << " Now it is testing " << arr[i] << " ";*/
 	
 	cout << endl;
 	cout << "When I call function_four(bar, 5,0,0) the values of the variables are as follows " << endl 
 		<< "lowest before execution: " <<lowest << endl
 		<< "highest before execution: " <<highest << endl
 		<< "array before execution: "; printarr(bar, 5); cout << endl;
-		function_four(bar,5,lowest, highest);
+		function_four(bar, 5, lowest, highest);
 	cout << "lowest after execution: " <<lowest << endl
 		 << "highest after execution: " <<highest << endl
 		 << "array after execution: "; printarr(bar, 5); cout << endl;

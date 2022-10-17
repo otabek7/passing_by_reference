@@ -12,9 +12,10 @@ using namespace std;
 * Implement function_one and its prototype in fn.h so that it takes two integer arguments i and j, adds 2 to i, adds 1 to j, but after execution of the function, only j is changed.
 */
 #include "fn.h"
-void function_one(/*Fill with the appropriate arguments */)
+void function_one(int i, int &j)
 {
-	
+	i+=2;
+    j+=1;
 }
 
 /*
@@ -24,8 +25,9 @@ void function_one(/*Fill with the appropriate arguments */)
 * Implement function_two and its prototype in fn.h so that it takes an argument of type example, and increments its' integer by 1. This change should persist after the function.
 */
 
-void function_two(/*Fill with the appropriate arguments */)
+void function_two(example &foo)
 {
+    foo.value +=1;
 
 }
 
@@ -41,7 +43,8 @@ void function_two(/*Fill with the appropriate arguments */)
 
 void function_three(int *k, int &l)
 {
-	
+	(*k)++;
+    (l)++;
 }
 
 /*
@@ -53,7 +56,24 @@ void function_three(int *k, int &l)
 * Do not worry about overflow/underflow conditions
 */
 
-void function_four(/*Fill with the appropriate arguments */)
+void function_four(int arr[], int size, int &smallest, int &largest)
 {
+    
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] +=2;
+    }
+    smallest = arr[0];
+    largest = arr[0];
+    for (int i = 0; i < size; i++)
+    {
+        if(arr[i] > largest){
+            largest = arr[i];
+        }
+        if(arr[i] < smallest){
+            smallest = arr[i];
+        }
+    }
+    
 
 }
